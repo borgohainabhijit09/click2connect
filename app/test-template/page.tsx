@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { BusinessCardData } from '@/types';
 import { templates } from '@/config/templates';
 
+// Template testing page
 export default function TestTemplatePage() {
     const [selectedTemplate, setSelectedTemplate] = useState(templates[0].id);
     const [isGenerating, setIsGenerating] = useState(false);
