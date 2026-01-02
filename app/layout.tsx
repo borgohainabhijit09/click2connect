@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://click2connect.com'),
+  metadataBase: new URL('https://click2connect.digital'),
   title: {
     default: 'Click2Connect - Smart Digital Business Cards | Create Your Card in 24 Hours',
     template: '%s | Click2Connect'
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://click2connect.com',
+    url: 'https://click2connect.digital',
     siteName: 'Click2Connect',
     title: 'Click2Connect - Smart Digital Business Cards',
     description: 'Create stunning digital business cards with interactive PDF, QR code, and instant contact sharing. Professional designs delivered in 24 hours.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/samples/sample-1.png',
         width: 1200,
         height: 630,
         alt: 'Click2Connect - Smart Digital Business Cards',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Click2Connect - Smart Digital Business Cards',
     description: 'Create stunning digital business cards with interactive PDF, QR code, and instant contact sharing. Starting at ₹99.',
-    images: ['/og-image.png'],
+    images: ['/samples/sample-1.png'],
     creator: '@click2connect',
   },
   robots: {
@@ -79,22 +79,19 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon.svg', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/icon.svg', sizes: '180x180', type: 'image/svg+xml' },
     ],
   },
   manifest: '/manifest.json',
   verification: {
     google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
   },
   alternates: {
-    canonical: 'https://click2connect.com',
+    canonical: 'https://click2connect.digital',
   },
   category: 'technology',
 };
@@ -107,7 +104,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Structured Data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -115,8 +111,8 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Click2Connect',
-              url: 'https://click2connect.com',
-              logo: 'https://click2connect.com/logo.png',
+              url: 'https://click2connect.digital',
+              logo: 'https://click2connect.digital/icon.svg',
               description: 'Smart digital business cards with interactive PDF, QR code, and instant contact sharing',
               address: {
                 '@type': 'PostalAddress',
@@ -127,7 +123,7 @@ export default function RootLayout({
                 '@type': 'ContactPoint',
                 telephone: '+91-91776-01334',
                 contactType: 'Customer Service',
-                email: 'support@click2connect.com'
+                email: 'support@click2connect.digital'
               },
               sameAs: [
                 'https://twitter.com/click2connect',
@@ -154,7 +150,7 @@ export default function RootLayout({
                 price: '99',
                 priceCurrency: 'INR',
                 availability: 'https://schema.org/InStock',
-                url: 'https://click2connect.com'
+                url: 'https://click2connect.digital'
               }
             })
           }}
