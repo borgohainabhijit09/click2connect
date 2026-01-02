@@ -15,6 +15,7 @@ export interface BusinessCardData {
 export interface Template {
     id: string;
     name: string;
+    description: string;
     preview: string;
     colors: {
         primary: string;

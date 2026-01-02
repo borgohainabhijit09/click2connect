@@ -4,6 +4,7 @@ export const templates: Template[] = [
     {
         id: 'modern-blue',
         name: 'Modern Blue',
+        description: 'Clean and professional design with blue accents',
         preview: '/templates/modern-blue.png',
         colors: {
             primary: '#2563eb',
@@ -15,6 +16,7 @@ export const templates: Template[] = [
     {
         id: 'elegant-purple',
         name: 'Elegant Purple',
+        description: 'Sophisticated purple theme for creative professionals',
         preview: '/templates/elegant-purple.png',
         colors: {
             primary: '#7c3aed',
@@ -26,6 +28,7 @@ export const templates: Template[] = [
     {
         id: 'professional-green',
         name: 'Professional Green',
+        description: 'Fresh nature-inspired design for growth businesses',
         preview: '/templates/professional-green.png',
         colors: {
             primary: '#059669',
@@ -37,6 +40,7 @@ export const templates: Template[] = [
     {
         id: 'creative-orange',
         name: 'Creative Orange',
+        description: 'Bold and energetic design that stands out',
         preview: '/templates/creative-orange.png',
         colors: {
             primary: '#ea580c',
@@ -48,6 +52,7 @@ export const templates: Template[] = [
     {
         id: 'minimal-black',
         name: 'Minimal Black',
+        description: 'Sleek monochrome style for modern minimalism',
         preview: '/templates/minimal-black.png',
         colors: {
             primary: '#0f172a',
@@ -59,6 +64,7 @@ export const templates: Template[] = [
     {
         id: 'vibrant-pink',
         name: 'Vibrant Pink',
+        description: 'Playful and vibrant design for personal brands',
         preview: '/templates/vibrant-pink.png',
         colors: {
             primary: '#db2777',

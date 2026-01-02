@@ -85,6 +85,7 @@ export default function TestTemplatePage() {
                                         }}
                                     />
                                     <p className="font-semibold text-gray-900">{template.name}</p>
+                                    <p className="text-sm text-gray-600">{template.description}</p>
                                 </button>
                             ))}
                         </div>
