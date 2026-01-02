@@ -66,7 +66,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/click2connect.git
+git clone https://github.com/borgohainabhijit09/click2connect.git
 cd click2connect
 ```
 
@@ -128,14 +128,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 5. **Add custom domain** in Vercel settings
 
-For detailed deployment instructions, see [VERCEL_DEPLOYMENT_COMPLETE.md](VERCEL_DEPLOYMENT_COMPLETE.md)
+For detailed deployment instructions, see [VERCEL_DEPLOYMENT_COMPLETE.md](docs/VERCEL_DEPLOYMENT_COMPLETE.md)
 
 ## 📚 Documentation
 
-- [Deployment Guide](VERCEL_DEPLOYMENT_COMPLETE.md) - Complete Vercel deployment instructions
-- [Email Testing](EMAIL_TESTING_GUIDE.md) - Email configuration and testing
-- [Production Setup](PRODUCTION_MODE_LIVE.md) - Razorpay live mode setup
-- [FAQ Redesign](FAQ_REDESIGN.md) - FAQ section documentation
+- [Deployment Guide](docs/VERCEL_DEPLOYMENT_COMPLETE.md) - Complete Vercel deployment instructions
+- [Email Testing](docs/EMAIL_TESTING_GUIDE.md) - Email configuration and testing
+- [Production Setup](docs/PRODUCTION_MODE_LIVE.md) - Razorpay live mode setup
+- [FAQ Redesign](docs/FAQ_REDESIGN.md) - FAQ section documentation
 
 ## 🔐 Environment Variables
 
