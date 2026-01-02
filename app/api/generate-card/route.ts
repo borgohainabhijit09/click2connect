@@ -4,9 +4,10 @@ import { saveToGoogleSheetsWebhook } from '@/lib/sheets-webhook';
 import { BusinessCardData } from '@/types';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
+    // Initialize Resend inside handler to prevent build-time errors if env var is missing
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     try {
         console.log('=== Generate Card API Started ===');
         const body = await request.json();

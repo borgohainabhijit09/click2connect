@@ -5,9 +5,9 @@ export async function POST(request: NextRequest) {
     try {
         const { amount } = await request.json();
 
-        if (!amount || amount !== 1) {
+        if (!amount || amount !== 99) {
             return NextResponse.json(
-                { error: 'Invalid amount' },
+                { error: 'Invalid amount. Must be ₹99' },
                 { status: 400 }
             );
         }
