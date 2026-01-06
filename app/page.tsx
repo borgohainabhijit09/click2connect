@@ -145,128 +145,229 @@ export default function Home() {
                 <main>
                     {step === 'landing' && (
                         <>
-                            {/* Urgency Banner - NEW */}
-                            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 text-center font-semibold text-sm">
-                                <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-2">
-                                    <span className="animate-pulse">🔥</span>
-                                    <span>Limited Time: Get Your Card for ₹99 (Regular ₹299) - Offer Ends Soon!</span>
-                                    <span className="animate-pulse">🔥</span>
+
+
+                            {/* Hero Section - Redesigned with Split Layout */}
+                            <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50/30 to-white">
+                                {/* Animated Background Elements */}
+                                <div className="absolute inset-0 overflow-hidden">
+                                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+                                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"></div>
                                 </div>
-                            </div>
 
-                            {/* Hero Section - Enhanced */}
-                            <section className="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-white">
-                                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                                    <div className="text-center max-w-5xl mx-auto">
-                                        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-blue-100 px-4 py-1.5 rounded-full text-blue-700 text-sm font-semibold mb-6 shadow-sm">
-                                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                            ✅ Delivered in 24 Hours | 🔒 100% Secure | 💯 Money-Back Guarantee
-                                        </div>
-
-                                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
-                                            Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600">10X More Clients</span><br className="hidden md:block" />
-                                            with a Professional Digital Card
-                                        </h1>
-
-                                        <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                                            Stop losing clients to lost business cards. Share your contact instantly via <strong>WhatsApp, Email, or QR Code</strong>. No app needed.
-                                        </p>
-
-                                        {/* Trust Badges - NEW */}
-                                        <div className="flex flex-wrap items-center justify-center gap-6 mb-10 text-sm text-gray-600">
-                                            <div className="flex items-center gap-2">
-                                                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                                                <span className="font-medium">100% Secure Payment</span>
+                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+                                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                                        {/* Left Column - Content */}
+                                        <div className="space-y-8">
+                                            {/* Badge */}
+                                            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-200 px-4 py-2 rounded-full shadow-sm">
+                                                <span className="relative flex h-3 w-3">
+                                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                                                </span>
+                                                <span className="text-sm font-semibold text-gray-700">Delivered in 24 Hours</span>
                                             </div>
-                                            <div className="flex items-center gap-2">
-                                                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                                                <span className="font-medium">Money-Back Guarantee</span>
-                                            </div>
-                                            <div className="flex items-center gap-2">
-                                                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                                                <span className="font-medium">500+ Happy Customers</span>
-                                            </div>
-                                        </div>
 
-                                        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-8">
-                                            <a
-                                                href="/builder"
-                                                className="group px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg shadow-2xl hover:shadow-blue-500/50 hover:-translate-y-1 transition-all cursor-pointer min-w-[280px] text-center relative overflow-hidden"
-                                            >
-                                                <span className="relative z-10">Get My Card - Only ₹99</span>
-                                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                            </a>
+                                            {/* Headline */}
+                                            <div>
+                                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4">
+                                                    Smart Digital<br />
+                                                    Visiting Card
+                                                </h1>
+                                                <div className="flex items-baseline gap-3 mb-6">
+                                                    <span className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">₹99</span>
+                                                    <span className="text-2xl text-gray-500 line-through">₹299</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Subheadline */}
+                                            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+                                                Let people <strong className="text-gray-900">call, WhatsApp, or save your contact</strong> in one tap.
+                                            </p>
+
+                                            {/* Trust Badges */}
+                                            <div className="flex flex-wrap gap-4">
+                                                <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-200">
+                                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                                    <span className="text-sm font-medium text-gray-700">One-time payment</span>
+                                                </div>
+                                                <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-200">
+                                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                                    <span className="text-sm font-medium text-gray-700">No subscription</span>
+                                                </div>
+                                                <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-200">
+                                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                                    <span className="text-sm font-medium text-gray-700">Works on all phones</span>
+                                                </div>
+                                            </div>
+
+                                            {/* CTA Button */}
+                                            <div className="space-y-4">
+                                                <a
+                                                    href="/builder"
+                                                    className="group inline-flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all cursor-pointer"
+                                                >
+                                                    <span>Create My Digital Card – ₹99</span>
+                                                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                    </svg>
+                                                </a>
+
+                                                {/* Payment Trust */}
+                                                <div className="flex items-center gap-2 text-sm text-gray-600">
+                                                    <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" /></svg>
+                                                    <span className="font-medium">Secure payments powered by Razorpay</span>
+                                                </div>
+                                            </div>
+
+                                            {/* See Examples Link */}
                                             <button
                                                 onClick={() => setShowGallery(true)}
-                                                className="px-10 py-5 bg-white text-gray-700 border-2 border-gray-300 rounded-xl font-bold text-lg shadow-lg hover:bg-gray-50 hover:border-blue-500 hover:text-blue-600 transition-all cursor-pointer flex items-center gap-2 min-w-[280px] justify-center group"
+                                                className="text-blue-600 hover:text-blue-700 font-medium text-sm underline cursor-pointer inline-flex items-center gap-1"
                                             >
-                                                <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
-                                                See Live Examples
+                                                See live examples
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                </svg>
                                             </button>
                                         </div>
 
-                                        {/* Risk Reversal - NEW */}
-                                        <p className="text-sm text-gray-500 mb-12">
-                                            <span className="font-semibold text-green-600">✓ No Risk:</span> Not satisfied? Get 100% refund within 7 days. No questions asked.
+                                        {/* Right Column - Visual */}
+                                        <div className="relative lg:block hidden">
+                                            {/* Card Preview Mockup */}
+                                            <div className="relative">
+                                                {/* Floating Elements */}
+                                                <div className="absolute -top-8 -left-8 bg-white rounded-2xl shadow-2xl p-4 animate-float">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
+                                                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-xs text-gray-500">One-Tap</p>
+                                                            <p className="font-bold text-gray-900">Call Direct</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-2xl p-4 animate-float" style={{ animationDelay: '0.5s' }}>
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center">
+                                                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-xs text-gray-500">Share via</p>
+                                                            <p className="font-bold text-gray-900">WhatsApp</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Main Card Display */}
+                                                <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl p-8 aspect-[9/16] max-w-sm mx-auto border border-gray-700">
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl"></div>
+                                                    <div className="relative h-full flex flex-col justify-between">
+                                                        {/* Card Header */}
+                                                        <div className="space-y-4">
+                                                            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                                                                <span className="text-3xl">👤</span>
+                                                            </div>
+                                                            <div>
+                                                                <h3 className="text-2xl font-bold text-white mb-1">Your Name</h3>
+                                                                <p className="text-blue-300">Your Profession</p>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Card Actions */}
+                                                        <div className="space-y-3">
+                                                            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-center gap-3">
+                                                                <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                                                                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                                                    </svg>
+                                                                </div>
+                                                                <span className="text-white font-medium">Tap to Call</span>
+                                                            </div>
+                                                            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-center gap-3">
+                                                                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                                                                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                                                    </svg>
+                                                                </div>
+                                                                <span className="text-white font-medium">Send Email</span>
+                                                            </div>
+                                                            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 flex items-center gap-3">
+                                                                <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
+                                                                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                                                                    </svg>
+                                                                </div>
+                                                                <span className="text-white font-medium">Save Contact</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Post-Payment Expectation - Below on Mobile, Centered */}
+                                    <div className="mt-12 max-w-2xl mx-auto">
+                                        <div className="bg-white/80 backdrop-blur-sm border-2 border-blue-200 rounded-2xl p-6 shadow-xl">
+                                            <p className="text-gray-900 font-bold mb-4 text-center flex items-center justify-center gap-2">
+                                                <span className="text-2xl">📩</span>
+                                                <span>After payment, you'll receive:</span>
+                                            </p>
+                                            <div className="grid md:grid-cols-3 gap-4">
+                                                <div className="flex items-center gap-3 bg-blue-50 rounded-xl p-3">
+                                                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shrink-0">
+                                                        <span className="text-xl">📱</span>
+                                                    </div>
+                                                    <span className="text-gray-700 font-medium text-sm">Interactive PDF</span>
+                                                </div>
+                                                <div className="flex items-center gap-3 bg-purple-50 rounded-xl p-3">
+                                                    <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center shrink-0">
+                                                        <span className="text-xl">📷</span>
+                                                    </div>
+                                                    <span className="text-gray-700 font-medium text-sm">QR Code</span>
+                                                </div>
+                                                <div className="flex items-center gap-3 bg-green-50 rounded-xl p-3">
+                                                    <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center shrink-0">
+                                                        <span className="text-xl">💾</span>
+                                                    </div>
+                                                    <span className="text-gray-700 font-medium text-sm">VCF File</span>
+                                                </div>
+                                            </div>
+                                            <p className="text-gray-600 text-sm mt-4 text-center">
+                                                ⚡ Delivered via email within 24 hours
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Social Proof */}
+                                    <div className="mt-8 text-center">
+                                        <p className="text-gray-600 text-sm">
+                                            ❤️ Loved by professionals across India
                                         </p>
-
-                                        {/* Social Proof Stats - Enhanced */}
-                                        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-10">
-                                            <div className="text-center">
-                                                <p className="text-4xl font-bold text-blue-600 mb-1">24h</p>
-                                                <p className="text-sm text-gray-600 font-medium">Fast Delivery</p>
-                                            </div>
-                                            <div className="text-center">
-                                                <p className="text-4xl font-bold text-green-600 mb-1">₹99</p>
-                                                <p className="text-sm text-gray-600 font-medium">One-Time Cost</p>
-                                            </div>
-                                            <div className="text-center">
-                                                <p className="text-4xl font-bold text-purple-600 mb-1">500+</p>
-                                                <p className="text-sm text-gray-600 font-medium">Happy Customers</p>
-                                            </div>
-                                            <div className="text-center">
-                                                <p className="text-4xl font-bold text-orange-600 mb-1">4.9★</p>
-                                                <p className="text-sm text-gray-600 font-medium">Average Rating</p>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
+
+                                <style jsx>{`
+                                    @keyframes float {
+                                        0%, 100% { transform: translateY(0px); }
+                                        50% { transform: translateY(-20px); }
+                                    }
+                                    .animate-float {
+                                        animation: float 3s ease-in-out infinite;
+                                    }
+                                `}</style>
                             </section>
 
-                            {/* Features Section - Contained */}
-                            <section id="features" className="py-24 bg-white">
-                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <div className="text-center mb-16">
-                                        <h2 className="text-3xl font-bold text-gray-900">Everything you need to grow</h2>
-                                    </div>
-                                    <div className="grid md:grid-cols-3 gap-12">
-                                        <div className="text-center group p-6 rounded-2xl hover:bg-gray-50 transition-colors cursor-pointer">
-                                            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors">
-                                                <span className="text-3xl group-hover:grayscale brightness-0 invert">📱</span>
-                                            </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">Interactive PDF</h3>
-                                            <p className="text-gray-600 leading-relaxed">Share your card digitally via WhatsApp or email with clickable links.</p>
-                                        </div>
-                                        <div className="text-center group p-6 rounded-2xl hover:bg-gray-50 transition-colors cursor-pointer">
-                                            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors">
-                                                <span className="text-3xl group-hover:grayscale brightness-0 invert">📷</span>
-                                            </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">QR Code</h3>
-                                            <p className="text-gray-600 leading-relaxed">Print and display your unique QR code for instant scanning.</p>
-                                        </div>
-                                        <div className="text-center group p-6 rounded-2xl hover:bg-gray-50 transition-colors cursor-pointer">
-                                            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors">
-                                                <span className="text-3xl group-hover:grayscale brightness-0 invert">💾</span>
-                                            </div>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-3">VCF File</h3>
-                                            <p className="text-gray-600 leading-relaxed">One-tap contact saving makes it easy for clients to save your number.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* How It Works Section - NEW */}
+                            {/* How It Works Section - Moved Up for Better Conversion */}
                             <section className="py-20 bg-gradient-to-b from-white to-blue-50/30">
                                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                     <div className="text-center mb-16">
@@ -298,8 +399,174 @@ export default function Home() {
                                     </div>
                                     <div className="text-center mt-12">
                                         <a href="/builder" className="inline-block px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 transition-all cursor-pointer">
-                                            Start Now - It's Quick! →
+                                            Create My Card – ₹99 →
                                         </a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/* Features Section - What You'll Receive - Redesigned */}
+                            <section id="features" className="py-24 bg-gradient-to-b from-white to-gray-50">
+                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                    <div className="text-center mb-16">
+                                        <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+                                            📦 Your Complete Package
+                                        </div>
+                                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What You'll Receive</h2>
+                                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                                            Everything you need to share your contact professionally
+                                        </p>
+                                    </div>
+
+                                    <div className="grid md:grid-cols-3 gap-8">
+                                        {/* Interactive PDF Card */}
+                                        <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-blue-200 overflow-hidden">
+                                            {/* Gradient Background */}
+                                            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                            <div className="relative z-10">
+                                                {/* Icon */}
+                                                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                                                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                    </svg>
+                                                </div>
+
+                                                {/* Title */}
+                                                <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">Interactive PDF</h3>
+
+                                                {/* Description */}
+                                                <p className="text-gray-600 text-center mb-6 leading-relaxed">
+                                                    Share via WhatsApp or email with clickable buttons
+                                                </p>
+
+                                                {/* Features List */}
+                                                <ul className="space-y-3">
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>Tap to call directly</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>WhatsApp integration</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>Works on all devices</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        {/* QR Code Card */}
+                                        <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-200 overflow-hidden">
+                                            {/* Gradient Background */}
+                                            <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                            <div className="relative z-10">
+                                                {/* Icon */}
+                                                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                                                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                                                    </svg>
+                                                </div>
+
+                                                {/* Title */}
+                                                <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">QR Code</h3>
+
+                                                {/* Description */}
+                                                <p className="text-gray-600 text-center mb-6 leading-relaxed">
+                                                    High-quality image ready to print or display
+                                                </p>
+
+                                                {/* Features List */}
+                                                <ul className="space-y-3">
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>Instant scan & save</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>Print-ready quality</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>Perfect for displays</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        {/* VCF File Card */}
+                                        <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-green-200 overflow-hidden">
+                                            {/* Gradient Background */}
+                                            <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                            <div className="relative z-10">
+                                                {/* Icon */}
+                                                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                                                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                                    </svg>
+                                                </div>
+
+                                                {/* Title */}
+                                                <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">VCF File</h3>
+
+                                                {/* Description */}
+                                                <p className="text-gray-600 text-center mb-6 leading-relaxed">
+                                                    Universal contact file for easy saving
+                                                </p>
+
+                                                {/* Features List */}
+                                                <ul className="space-y-3">
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>One-tap save to phone</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>iOS & Android compatible</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2 text-sm text-gray-700">
+                                                        <svg className="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                        </svg>
+                                                        <span>No manual typing needed</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Bottom CTA */}
+                                    <div className="mt-16 text-center">
+                                        <div className="inline-block bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border-2 border-blue-200">
+                                            <p className="text-gray-900 font-bold text-lg mb-2">All 3 files delivered to your email</p>
+                                            <p className="text-gray-600 mb-4">Ready to use within 24 hours of payment</p>
+                                            <a href="/builder" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+                                                Get Started Now
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -309,7 +576,7 @@ export default function Home() {
                                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                     <div className="text-center mb-16">
                                         <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
-                                        <p className="text-xl text-gray-600">Join 500+ professionals who love their digital cards</p>
+                                        <p className="text-xl text-gray-600">Loved by professionals across India</p>
                                     </div>
                                     <div className="grid md:grid-cols-3 gap-8">
                                         {[
@@ -409,146 +676,94 @@ export default function Home() {
                                     </div>
                                     <div className="text-center mt-12">
                                         <a href="/builder" className="inline-block px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg shadow-2xl hover:shadow-blue-500/50 transition-all cursor-pointer">
-                                            Get Started for Just ₹99 →
+                                            Create My Card – ₹99 • One-time payment →
                                         </a>
                                     </div>
                                 </div>
                             </section>
 
-                            {/* FAQ Section - Redesigned with Accordion */}
-                            <section className="py-24 bg-gradient-to-b from-white via-blue-50/30 to-white">
-                                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <div className="text-center mb-16">
-                                        <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
-                                            💡 Got Questions?
-                                        </div>
-                                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                                        <p className="text-xl text-gray-600">Everything you need to know about Click2Connect</p>
+                            {/* FAQ Section - Compact Redesign */}
+                            <section className="py-16 bg-white">
+                                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                                    <div className="text-center mb-12">
+                                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Quick Questions</h2>
+                                        <p className="text-gray-600">Everything you need to know</p>
                                     </div>
 
-                                    <div className="space-y-4 mb-12">
+                                    <div className="grid md:grid-cols-2 gap-4 mb-10">
                                         {[
                                             {
-                                                q: "How long does it take to get my card?",
-                                                a: "Your digital business card will be delivered to your email within 24 hours of payment. Most orders are completed even faster! You'll receive 3 professional files ready to use immediately.",
-                                                icon: "⏱️"
+                                                q: "How long does delivery take?",
+                                                a: "Within 24 hours via email. You'll receive PDF, QR Code, and VCF files.",
                                             },
                                             {
                                                 q: "What files do I receive?",
-                                                a: "You'll get 3 professional files: (1) Interactive PDF with clickable links for easy sharing, (2) High-quality QR Code image for printing, and (3) VCF contact file for one-tap saving to phone contacts.",
-                                                icon: "📁"
+                                                a: "Interactive PDF, high-quality QR Code image, and VCF contact file.",
                                             },
                                             {
                                                 q: "Can I update my card later?",
-                                                a: "Yes! Contact us anytime and we'll update your information for free. Your card links will automatically reflect the changes. No additional charges, ever.",
-                                                icon: "🔄"
+                                                a: "Yes! Contact us anytime for free updates. No additional charges.",
                                             },
                                             {
-                                                q: "Is the payment secure?",
-                                                a: "Absolutely! We use Razorpay, India's most trusted payment gateway with bank-level encryption. Your payment information is 100% secure and we never store your card details.",
-                                                icon: "🔒"
+                                                q: "Is payment secure?",
+                                                a: "100% secure via Razorpay with bank-level encryption.",
                                             },
                                             {
-                                                q: "What if I'm not satisfied?",
-                                                a: "We offer a 100% money-back guarantee within 7 days. If you're not happy with your card, we'll refund you immediately - no questions asked. Your satisfaction is our priority!",
-                                                icon: "💯"
+                                                q: "Do clients need an app?",
+                                                a: "No app needed. Works on any device with a web browser.",
                                             },
                                             {
-                                                q: "Do my clients need an app to view my card?",
-                                                a: "No! Your card works on any device with a web browser. No app installation required. Just share the link via WhatsApp, Email, or let them scan your QR code. It's that simple!",
-                                                icon: "📱"
+                                                q: "Who operates Click2Connect?",
+                                                a: "Sygmia Innovative, an India-based digital solutions company.",
                                             }
                                         ].map((faq, i) => (
                                             <div
                                                 key={i}
-                                                className="bg-white rounded-2xl border-2 border-gray-200 overflow-hidden hover:border-blue-300 transition-all duration-300 shadow-sm hover:shadow-lg"
+                                                className="bg-gray-50 rounded-xl p-5 hover:bg-blue-50 transition-colors border border-gray-200 hover:border-blue-300"
                                             >
                                                 <button
                                                     onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
-                                                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-blue-50/50 transition-colors"
+                                                    className="w-full text-left"
                                                 >
-                                                    <div className="flex items-center gap-4 flex-1">
-                                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl shrink-0 shadow-md">
-                                                            {faq.icon}
+                                                    <div className="flex items-start justify-between gap-3">
+                                                        <h3 className="font-bold text-gray-900 text-sm flex-1">{faq.q}</h3>
+                                                        <div className={`shrink-0 transition-transform duration-200 ${openFaqIndex === i ? 'rotate-180' : ''}`}>
+                                                            <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                            </svg>
                                                         </div>
-                                                        <h3 className="text-lg font-bold text-gray-900 pr-4">{faq.q}</h3>
                                                     </div>
-                                                    <div className={`w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0 transition-transform duration-300 ${openFaqIndex === i ? 'rotate-180' : ''}`}>
-                                                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                        </svg>
+                                                    <div className={`overflow-hidden transition-all duration-300 ${openFaqIndex === i ? 'max-h-40 mt-3' : 'max-h-0'}`}>
+                                                        <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
                                                     </div>
                                                 </button>
-                                                <div
-                                                    className={`overflow-hidden transition-all duration-300 ${openFaqIndex === i ? 'max-h-96' : 'max-h-0'}`}
-                                                >
-                                                    <div className="px-6 pb-6 pt-2">
-                                                        <div className="pl-16 pr-12">
-                                                            <p className="text-gray-700 leading-relaxed text-base">{faq.a}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         ))}
                                     </div>
 
-                                    {/* Contact CTA Card - Redesigned */}
-                                    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 p-8 md:p-12 text-white shadow-2xl">
-                                        {/* Decorative Elements */}
-                                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-                                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
-
-                                        <div className="relative z-10">
-                                            <div className="text-center mb-8">
-                                                <div className="inline-block p-4 bg-white/10 backdrop-blur rounded-2xl mb-4">
-                                                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                </div>
-                                                <h3 className="text-3xl md:text-4xl font-bold mb-3">Still have questions?</h3>
-                                                <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                                                    We're here to help! Our team is ready to answer all your questions.
-                                                </p>
-                                            </div>
-
-                                            <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                                                <a
-                                                    href="tel:+917760133445"
-                                                    className="group flex items-center gap-4 p-6 bg-white/10 backdrop-blur border-2 border-white/20 rounded-2xl hover:bg-white hover:text-blue-600 transition-all cursor-pointer shadow-lg hover:shadow-xl hover:scale-105"
-                                                >
-                                                    <div className="w-14 h-14 bg-white/20 group-hover:bg-blue-100 rounded-xl flex items-center justify-center shrink-0 transition-colors">
-                                                        <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                                        </svg>
-                                                    </div>
-                                                    <div className="text-left">
-                                                        <p className="text-sm font-semibold opacity-90 mb-1">Call Us Now</p>
-                                                        <p className="text-lg font-bold">+91 776 0133445</p>
-                                                    </div>
-                                                </a>
-
-                                                <a
-                                                    href="mailto:support@click2connect.com"
-                                                    className="group flex items-center gap-4 p-6 bg-white/10 backdrop-blur border-2 border-white/20 rounded-2xl hover:bg-white hover:text-blue-600 transition-all cursor-pointer shadow-lg hover:shadow-xl hover:scale-105"
-                                                >
-                                                    <div className="w-14 h-14 bg-white/20 group-hover:bg-blue-100 rounded-xl flex items-center justify-center shrink-0 transition-colors">
-                                                        <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                                        </svg>
-                                                    </div>
-                                                    <div className="text-left">
-                                                        <p className="text-sm font-semibold opacity-90 mb-1">Email Support</p>
-                                                        <p className="text-lg font-bold">Get Help 24/7</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="text-center mt-8">
-                                                <p className="text-sm text-blue-100">
-                                                    <span className="font-semibold">⚡ Quick Response:</span> We typically reply within 2 hours during business hours
-                                                </p>
-                                            </div>
+                                    {/* Compact Contact CTA */}
+                                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-center text-white">
+                                        <p className="font-bold text-lg mb-3">Still have questions?</p>
+                                        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                                            <a
+                                                href="tel:+917760133445"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                                            >
+                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                                </svg>
+                                                <span>Call Us</span>
+                                            </a>
+                                            <a
+                                                href="mailto:support@click2connect.com"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur border border-white/30 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                                            >
+                                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                                </svg>
+                                                <span>Email Support</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -599,7 +814,7 @@ export default function Home() {
 
                                     <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
                                         <p className="text-gray-500">
-                                            © 2025 Click2Connect. Made with ❤️ in India.
+                                            © 2025 Click2Connect. A product by <a href="https://sygmiainnovative.co.in/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors underline">Sygmia Innovative</a>, India.
                                         </p>
                                         <div className="flex gap-8 mt-4 md:mt-0">
                                             <a href="#" className="text-gray-500 hover:text-white transition-colors cursor-pointer">Privacy</a>
